@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
+import { RecoilRoot } from "recoil";
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -7,8 +8,10 @@ type AppProviderProps = {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
-    <ThemeProvider theme={theme}>
-      {children}
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={theme}>
+        {children}
+      </ThemeProvider>
+    </RecoilRoot>
   );
 };
