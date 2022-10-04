@@ -1,11 +1,14 @@
+import { sampleCount } from "@/globalStates/Sample/count";
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import CircularProgress from "@mui/material/CircularProgress";
 
 export const Sample = (): JSX.Element => {
+  const [count, increace] = sampleCount.useIncreaceCount();
+
   return (
     <Box>
-      react mui template
-      <CircularProgress />
+      {count}
+      <Button type="button" onClick={increace}>増やす</Button>
     </Box>
   )
 }
