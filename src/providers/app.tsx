@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/material";
-import theme from "../theme";
+import theme from "@/theme";
 
 type AppProviderProps = {
   children: React.ReactNode;

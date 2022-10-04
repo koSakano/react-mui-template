@@ -1,5 +1,5 @@
-import { Sample } from "./components/common/Sample";
-import { AppProvider } from "./providers/app";
+import { Sample } from "@/components/common/Sample";
+import { AppProvider } from "@/providers/app";
 
 function App() {
 
