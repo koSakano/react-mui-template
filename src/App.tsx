@@ -1,15 +1,11 @@
-import Box from "@mui/material/Box";
-import CircularProgress from "@mui/material/CircularProgress";
+import { Sample } from "./components/common/Sample";
 import { AppProvider } from "./providers/app";
 
 function App() {
 
   return (
     <AppProvider>
-      <Box>
-        react mui template
-        <CircularProgress />
-      </Box>
+      <Sample />
     </AppProvider>
   )
 }
