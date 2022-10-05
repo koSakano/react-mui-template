@@ -7,7 +7,7 @@ name: 'Chromatic Deployment'
 on: push
 
 env:
-  NODE_OPTIONS=--openssl-legacy-providers
+  NODE_OPTIONS: --openssl-legacy-providers
 
 # List of jobs
 jobs:
