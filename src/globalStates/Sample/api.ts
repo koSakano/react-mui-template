@@ -9,12 +9,16 @@ export const sampleApi = {
     if (error) {
       throw error;
     }
+    // Suspence モードなのでundefindであることはない。
+    if (!data) {
+      throw data;
+    }
 
     return data;
   },
   usePostSample: (
     onSuccess: (data: PostDTO) => void,
-    onError: (error: AxiosError) => void
+    onError?: (error: AxiosError) => void
   ) => ({
     submit: (data: PostDTO) => {
       postSample(data)
@@ -22,6 +26,9 @@ export const sampleApi = {
           onSuccess(data);
         })
         .catch((error: AxiosError) => {
+          if (!onError) {
+            throw error;
+          }
           onError(error);
         });
     }

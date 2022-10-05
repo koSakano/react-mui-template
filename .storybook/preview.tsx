@@ -4,7 +4,9 @@ import { handlers } from './../src/mocks/handlers';
 import { Parameters } from "@storybook/addons";
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 
-initialize();
+initialize({
+  onUnhandledRequest: 'bypass',
+});
 
 export const parameters: Parameters = {
   msw: {
