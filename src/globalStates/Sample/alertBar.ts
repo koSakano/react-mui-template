@@ -1,5 +1,5 @@
-import { atom, useRecoilState } from "recoil";
-import { RECOIL_KEYS } from "../recoilKeys";
+import { atom, useRecoilState } from 'recoil';
+import { RECOIL_KEYS } from '../recoilKeys';
 
 const open = atom<boolean>({
   key: RECOIL_KEYS.SAMPLE,

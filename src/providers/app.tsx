@@ -1,9 +1,9 @@
-import { CircularProgress, ThemeProvider } from "@mui/material";
-import theme from "@/theme";
-import { RecoilRoot } from "recoil";
-import { SWRConfig } from "swr";
-import options from "@/swrOptions";
-import { Suspense } from "react";
+import { CircularProgress, ThemeProvider } from '@mui/material';
+import theme from '@/theme';
+import { RecoilRoot } from 'recoil';
+import { SWRConfig } from 'swr';
+import options from '@/swrOptions';
+import { Suspense } from 'react';
 
 type AppProviderProps = {
   children: React.ReactNode;

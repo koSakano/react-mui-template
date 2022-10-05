@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-export * from "axios";
+export * from 'axios';
 
 const axiosInstance = axios.create();
 

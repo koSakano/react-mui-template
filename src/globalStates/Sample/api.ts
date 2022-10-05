@@ -1,7 +1,7 @@
-import { API_PATHS } from "@/api/constants";
-import { getSample, postSample, PostDTO } from "@/api/Sample";
-import { AxiosError } from "@/lib/axios";
-import useSWR from "swr";
+import { API_PATHS } from '@/api/constants';
+import { getSample, postSample, PostDTO } from '@/api/Sample';
+import { AxiosError } from '@/lib/axios';
+import useSWR from 'swr';
 
 export const sampleApi = {
   useGetSample: () => {
@@ -18,7 +18,7 @@ export const sampleApi = {
   },
   usePostSample: (
     onSuccess: (data: PostDTO) => void,
-    onError?: (error: AxiosError) => void
+    onError?: (error: AxiosError) => void,
   ) => ({
     submit: (data: PostDTO) => {
       postSample(data)
@@ -31,6 +31,6 @@ export const sampleApi = {
           }
           onError(error);
         });
-    }
-  })
+    },
+  }),
 };
