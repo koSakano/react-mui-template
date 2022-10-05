@@ -6,6 +6,9 @@ name: 'Chromatic Deployment'
 # Event for the workflow
 on: push
 
+env:
+  NODE_OPTIONS=--openssl-legacy-providers
+
 # List of jobs
 jobs:
   test:
