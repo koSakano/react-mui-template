@@ -1,6 +1,8 @@
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
 import { RecoilRoot } from "recoil";
+import { SWRConfig } from "swr";
+import options from "@/swrOptions";
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -9,9 +11,11 @@ type AppProviderProps = {
 export const AppProvider = ({ children }: AppProviderProps) => {
   return (
     <RecoilRoot>
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
+      <SWRConfig value={options}>
+        <ThemeProvider theme={theme}>
+          {children}
+        </ThemeProvider>
+      </SWRConfig>
     </RecoilRoot>
   );
 };
